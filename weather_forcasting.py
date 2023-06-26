@@ -81,7 +81,7 @@ def modify_weather_data(data):
     # convert min temperature from kelvin to celcius
     data['temp_min'] = round(data['temp_min'] - 273.15,1)
     # convert wind speed from m/s to km/h
-    data['wind_speed'] = data['wind_speed'] * 3.6
+    data['wind_speed'] = round(data['wind_speed'] * 3.6,1)
     # convert visibility from m to km
     data['visibility'] = data['visibility'] / 1000
     # convert date time from unix timestamp to date time format. only want date not time
